@@ -12,17 +12,16 @@
  What is the greatest product of four adjacent numbers in the same direction 
     (up, down, left, right, or diagonally) in the 20×20 grid?
  
- 
  I really wanted to do this with threads, but I didn't feel like figuring out 
     pthreads again. I'm sure this could also be achieved using recursion, but I 
     didn't think it was necessary.
  
  Sliding window (in this implementation) isn't efficient because there are a lot 
     of re-computations. This can be corrected by changing the computations per 
-    lide. After the first slide, you need only compute the last window's last 
+    slide. After the first slide, you need only compute the last window's last 
     column's product, all the window's rows' products, and the products of both
-    diagonals in the window. Initially you must make 4 x 4 x 2 = 16 calculations. 
-    If you make this adjustmnet, you have 1 x 4 x 2 = 8, which is 50% more efficient.
+    diagonals in the window. Initially you must make 4 x 4 x 2 = 32 calculations. 
+    If you make this adjustment, you have 1 x 4 x 2 = 8, which is 75% more efficient.
  
 ---------------------------------------------------------------------------------------
  
